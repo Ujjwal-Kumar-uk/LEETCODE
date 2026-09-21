@@ -1,7 +1,12 @@
-def rotstr(s):
-    rev = ""
-    for char in s:
-        rev = char + rev
-    return rev
-s = input("enter the string: ")
-print(rotstr(s))
+class Solution:
+    def reverseWords(self, s):
+        words = s.split()
+        ans = ""
+
+        for i in range(len(words) - 1, -1, -1):
+            ans += words[i]
+
+            if i != 0:
+                ans += " "
+
+        return ans
