@@ -5,10 +5,11 @@ def inter(a,b):
         if i in count:
             count[i]+=1
         else:
-            count[i]=0
+            count[i]=1
     for i in b:
         if i in count and count[i]>0:
             result.append(i)
+            count[i]-=1
 
     return result
 a = [4,4,5]
